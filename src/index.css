@@ -1,13 +1,191 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #1E1E1E;
 }
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+aside {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+aside > h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: green;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section > .section-card {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  background-color: #343434;
+  margin: 50px 0px 130px 0px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+section > .section-card > .card-header {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+section > .section-card > .card-header > .card-search {
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  padding: 5px 20px;
+}
+section > .section-card > .card-header > .card-search > h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: green;
+}
+section > .section-card > .card-header > .card-search > input {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  padding: 5px 10px;
+  outline: none;
+  margin: 10px 0px 0px 0px;
+  border-radius: 3px;
+  border: none;
+  font-family: monospace;
+  color: green;
+}
+section > .section-card > .card-header > .card-add {
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+section > .section-card > .card-header > .card-add > h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: green;
+}
+section > .section-card > .card-header > .card-add > span {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section > .section-card > .card-header > .card-add > span > input {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  padding: 5px 10px;
+  outline: none;
+  margin: 10px 0px 0px 0px;
+  border-radius: 3px;
+  border: none;
+  font-family: monospace;
+  color: green;
+}
+section > .section-card > .card-header > .card-add > span > button {
+  width: 80px;
+  height: 30px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #3C6138;
+  transition: all 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+section > .section-card > .card-header > .card-add > span > button:hover {
+  background-color: green;
+}
+section > .section-card > .card-info {
+  width: 100%;
+  height: auto;
+}
+section > .section-card > .card-info > table {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+  border: 2px solid green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 30px;
+}
+section > .section-card:hover {
+  border: 2px solid green;
+  box-shadow: 15px 15px 5px #1C1C1C;
+}
+
+.btn-api {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #C41632;
+  transition: all 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin: 5px 10px;
+}
+
+.btn-api:hover {
+  background-color: #B41F40;
+}
+
+.btn-edit {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  transition: all 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin: 5px 10px;
+}
+
+.btn-edit:hover {
+  background-color: #3C6138;
+}/*# sourceMappingURL=Index.css.map */
