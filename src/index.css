@@ -188,4 +188,8 @@ section > .section-card:hover {
 
 .btn-edit:hover {
   background-color: #3C6138;
+}
+
+.btn-save {
+  background-color: red;
 }/*# sourceMappingURL=Index.css.map */

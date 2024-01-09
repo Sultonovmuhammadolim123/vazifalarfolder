@@ -114,7 +114,7 @@ const App = () => {
                         </button>
                       </th>
                      {
-                      value.id == chose ? (<th><button onClick={save}>save</button></th> ) : (<th><button onClick={ () => edit(value) } className="btn-edit" >edit</button></th>)
+                      value.id == chose ? (<th><button className="btn-save" onClick={save}>save</button></th> ) : (<th><button onClick={ () => edit(value) } className="btn-edit" >edit</button></th>)
                      }
                     </tr>
                   );
