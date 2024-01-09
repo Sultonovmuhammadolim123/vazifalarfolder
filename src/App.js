@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Index.css";
+import './responsive/responsive.css'
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -54,8 +55,8 @@ const App = () => {
    }
 
    const save = () =>{
-    let yangiMalumot = data.map( (value) => value.id == chose ? {...value, title: text } : value )
-    setData(yangiMalumot)
+    let yangiInfo = data.map( (value) => value.id == chose ? {...value, title: text } : value )
+    setData(yangiInfo)
     setChose(null)
    }  
    
@@ -82,7 +83,7 @@ const App = () => {
             </div>
           </div>
           <div className="card-info">
-            <table border={1} cellPadding={10}>
+            <table width={100} border={1} >
               <thead>
                 <tr>
                   <th>NO:</th>
@@ -100,7 +101,7 @@ const App = () => {
                         {
                           value.id == chose 
                           ?
-                          (<input onChange={getValue} value={text} type="text" />)
+                          (<input  className="input-title" onChange={getValue} value={text} type="text" />)
                           :
                           value.title
                         }

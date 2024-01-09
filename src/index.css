@@ -137,7 +137,7 @@ section > .section-card > .card-info {
   height: auto;
 }
 section > .section-card > .card-info > table {
-  width: 100%;
+  width: 500px;
   padding: 5px;
   margin: 10px 0px 10px 0px;
   border: 2px solid green;
@@ -146,6 +146,7 @@ section > .section-card > .card-info > table {
   font-size: 18px;
   color: #fff;
   margin-top: 30px;
+  text-transform: capitalize;
 }
 section > .section-card:hover {
   border: 2px solid green;
@@ -191,5 +192,43 @@ section > .section-card:hover {
 }
 
 .btn-save {
-  background-color: red;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: orangered;
+  transition: all 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin: 5px 10px;
+}
+
+.btn-save:hover {
+  background-color: orange;
+}
+
+.input-title {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid green;
+  background-color: green;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-transform: capitalize;
+  flex-wrap: wrap;
+}
+
+.input-title:focus {
+  background-color: orangered;
 }/*# sourceMappingURL=Index.css.map */
