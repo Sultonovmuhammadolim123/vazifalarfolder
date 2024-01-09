@@ -72,13 +72,17 @@ const App = () => {
           <div className="card-header">
             <div className="card-search">
               <h4>Qidirish:</h4>
+
               <input onChange={search} type="text" placeholder="Qidirish:" />
+
             </div>
             <div className="card-add">
               <h4>Vazifa qo'shish:</h4>
               <span>
+
                 <input onChange={yarat} type="text" placeholder="Qo'shsih:" />
                 <button onClick={add}>Add</button>
+
               </span>
             </div>
           </div>
@@ -93,6 +97,7 @@ const App = () => {
                 </tr>
               </thead>
               <tbody>
+              
                 {data.map((value, index) => {
                   return (
                     <tr key={value.id}>
