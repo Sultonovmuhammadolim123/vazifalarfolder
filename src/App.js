@@ -7,6 +7,7 @@ import { BiSolidSave } from "react-icons/bi";
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [back, setBack] = useState([]);
   const [chose, setChose] = useState(null)
   const [text , setText] = useState(null)
 
@@ -22,7 +23,9 @@ const App = () => {
         throw new Error("API da Xatolik bor, tekshirib koring")
       }
     })
-    .then( info => {setData(info)})
+    .then( info => {
+      return (setData(info),setBack(info))
+      })
     .catch( xato => console.log(xato)) 
   } , [])
 
@@ -31,7 +34,8 @@ const App = () => {
 
   const ochir = (raqam) => {
     let yangiData = data.filter((value) => value.id !== raqam);
-    setData(yangiData); 
+    setData(yangiData)
+    setBack(yangiData)
   };
   
   const yarat = (e) => {
@@ -39,13 +43,20 @@ const App = () => {
   };
 
   const add = () => {
-    let ynagiVazifa = { id: data.length , title: qiymat };
-    setData([...data , ynagiVazifa]);
+    let yangiVazifa = { id: data.length +1 , title: qiymat };
+    setData([yangiVazifa, ...data])
+    setBack([yangiVazifa, ...back])
   };
   
   const search = (e) =>{
-    let yangiMalumot = data.filter((value) => value.title.toLowerCase().includes(e.target.value.toLowerCase()))
-    setData(yangiMalumot)
+    let yangiMalumot = data.filter((value) => value.title.toLowerCase().includes(e.target.value.toLowerCase()));
+    if ( e.target.value.length > 0){
+      setData(yangiMalumot);
+    }
+    else
+    {
+      setData(back)
+    }
   } 
 
    const edit = (e) =>{
@@ -58,7 +69,7 @@ const App = () => {
    }
 
    const save = () =>{
-    let yangiInfo = data.map( (value) => value.id == chose ? {...value, title: text } : value )
+    let yangiInfo = data.map(    (value) => value.id == chose ? {...value, title: text } : value )
     setData(yangiInfo)
     setChose(null)
    }  
