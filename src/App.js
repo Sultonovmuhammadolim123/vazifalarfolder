@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Index.css";
+import './responsive/responsive.css'
 import { MdDeleteForever } from "react-icons/md";
 import { AiFillEdit } from "react-icons/ai";
 import { BiSolidSave } from "react-icons/bi";
