@@ -295,6 +295,13 @@ section {
 
 .card-3::-webkit-scrollbar {
     border-radius: 50px;
+    color: red;
+    background-color: #615b5b;
+    height: 9px;
+}
+.card-3::-webkit-scrollbar-thumb {
+    border-radius: 50px;
     background-color: #312f2f;
-
+    color: red;
+    cursor: pointer;
 }
