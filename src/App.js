@@ -43,13 +43,13 @@ const App = () => {
   };
 
   const add = () => {
-    let yangiVazifa = { id: data.length +1 , title: qiymat };
+    let yangiVazifa = { id: data.length + 1 , title: qiymat };
     setData([yangiVazifa, ...data])
     setBack([yangiVazifa, ...back])
   };
   
   const search = (e) =>{
-    let yangiMalumot = data.filter((value) => value.title.toLowerCase().includes(e.target.value.toLowerCase()));
+    let yangiMalumot = back.filter((value) => value.title.toLowerCase().includes(e.target.value.toLowerCase()));
     if ( e.target.value.length > 0){
       setData(yangiMalumot);
     }
